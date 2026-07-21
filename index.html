@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceryostrich — UI Designer & Graphic Artist & Coder</title>
+  <meta name="description" content="Salman (Ceryostrich) — UI/UX Designer, Graphic Artist & Software Engineer. Bold, expressive portfolio showcasing hybrid creative & technical skills.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Decorative overlays -->
+  <div class="scanline-overlay"></div>
+  <div class="corner-tl"></div>
+  <div class="corner-br"></div>
+
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="main-nav">
+    <a href="#home" class="nav-logo">CERY<span style="color:var(--accent-pink);">_</span>OSTRICH</a>
+    <ul class="nav-links">
+      <li><a href="#home"     id="nav-home"     class="active">Home</a></li>
+      <li><a href="#services" id="nav-services">Services</a></li>
+      <li><a href="#projects" id="nav-projects">Projects</a></li>
+      <li><a href="#about"    id="nav-about">About</a></li>
+      <li><a href="#store"    id="nav-store">Store</a></li>
+      <li><a href="#contact"  id="nav-contact">Contact</a></li>
+    </ul>
+    <span class="nav-status mono-font">[ SYS_READY // v2.0 ]</span>
+  </nav>
+
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee-wrapper" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track">
+      <span>SALMAN</span>
+      <span class="sep">✦</span>
+      <span>UI DESIGNER</span>
+      <span class="sep">✦</span>
+      <span>GRAPHIC ARTIST</span>
+      <span class="sep">✦</span>
+      <span>CODER</span>
+      <span class="sep">✦</span>
+      <span>CERYOSTRICH</span>
+      <span class="sep">✦</span>
+      <span>SALMAN</span>
+      <span class="sep">✦</span>
+      <span>UI DESIGNER</span>
+      <span class="sep">✦</span>
+      <span>GRAPHIC ARTIST</span>
+      <span class="sep">✦</span>
+      <span>CODER</span>
+      <span class="sep">✦</span>
+      <span>CERYOSTRICH</span>
+      <span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ─── MAIN CONTENT ─── -->
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section id="home" class="section" aria-label="Hero">
+      <div class="hero-left">
+        <div class="hero-tag">Available for Projects ● 2025</div>
+
+        <h1 class="hero-name">
+          <span class="line-1">SALMAN</span><br>
+          <span class="line-2">CERY</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Informatics student by day.<br>
+          UI designer, graphic artist &amp; coder by compulsion.<br>
+          <span style="color:var(--accent);">// Ceryostrich.my.id</span>
+        </p>
+
+        <!-- Sticker Badges -->
+        <div class="sticker-badges" role="list" aria-label="Skill categories">
+          <span class="badge lime"  role="listitem">🎨 UI Design</span>
+          <span class="badge pink"  role="listitem">🖌️ Graphic Art</span>
+          <span class="badge cyan"  role="listitem">⌨️ PHP / JS</span>
+          <span class="badge dark"  role="listitem">🎮 Game Assets</span>
+          <span class="badge lime"  role="listitem">📐 Figma</span>
+          <span class="badge pink"  role="listitem">🔲 Pixel Art</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-brut primary" id="cta-explore">EXPLORE WORK_</a>
+          <a href="#contact"  class="btn-brut secondary" id="cta-contact">CONTACT ME</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="avatar-frame floating">
+          <img src="assets/avatar.png" alt="Salman / Ceryostrich — pixel avatar" id="hero-avatar">
+        </div>
+        <div class="deco-block deco-1">SINCE 2022_</div>
+        <div class="deco-block deco-2">INFORMATICS 📚</div>
+        <div class="deco-block deco-3">OPEN_TO_WORK ●</div>
+      </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section id="services" class="section" aria-label="Services">
+      <div class="reveal">
+        <p class="section-label">What I Do</p>
+        <h2 class="section-title">
+          MY <span class="outline">CRAFT</span>
+        </h2>
+      </div>
+
+      <div class="services-grid" id="services-container" role="list">
+        <!-- Loaded from data.json -->
+      </div>
+    </section>
+
+    <!-- ─── PROJECT SHOWCASE ─── -->
+    <section id="projects" class="section" aria-label="Projects">
+      <div class="reveal">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">
+          THE <span class="accent">VAULT</span>
+        </h2>
+      </div>
+
+      <!-- UI/UX Module -->
+      <div class="reveal">
+        <div class="vault-label uiux">// UI/UX Case Studies</div>
+        <h3 class="vault-title">Design <span style="color:var(--accent-cyan)">Systems</span></h3>
+      </div>
+      <div class="projects-grid" id="uiux-container" role="list">
+        <!-- Loaded from data.json -->
+      </div>
+
+      <!-- Graphic / Assets Module -->
+      <div class="reveal">
+        <div class="vault-label graphic">// Graphic & Digital Assets</div>
+        <h3 class="vault-title">Visual <span style="color:var(--accent-pink)">Works</span></h3>
+      </div>
+      <div class="projects-grid" id="graphic-container" role="list">
+        <!-- Loaded from data.json -->
+      </div>
+    </section>
+
+    <!-- ─── ABOUT / OS DASHBOARD ─── -->
+    <section id="about" class="section" aria-label="About me">
+      <div class="reveal">
+        <p class="section-label">The Human Behind the Pixels</p>
+        <h2 class="section-title">
+          <span class="outline">ABOUT</span> <span class="pink">ME</span>
+        </h2>
+      </div>
+
+      <div class="os-desktop reveal" id="os-desktop" aria-label="Interactive OS dashboard">
+
+        <!-- OS Taskbar -->
+        <div class="os-taskbar" aria-hidden="true">
+          <span class="os-start">⊞ START</span>
+          <span>📁 about.exe</span>
+          <span>🎨 skills.exe</span>
+          <span>🔧 stack.exe</span>
+          <span class="os-time" id="os-clock">00:00:00</span>
+        </div>
+
+        <!-- Window 1: About Me -->
+        <div class="os-window win-about" id="win-about" role="region" aria-label="About info window">
+          <div class="os-titlebar" id="titlebar-about" aria-label="Drag to move">
+            <span class="os-btn close" title="Close"></span>
+            <span class="os-btn min"   title="Minimize"></span>
+            <span class="os-btn max"   title="Maximize"></span>
+            <span class="os-title">about.exe</span>
+          </div>
+          <div class="os-window-body">
+            <img src="assets/avatar2.png" alt="Salman profile" class="about-photo">
+            <div class="about-name">Salman</div>
+            <div class="about-role mono-font">// UI Designer · Graphic Artist · Coder</div>
+            <p class="about-bio">
+              Informatics student with a hybrid skill set — I design bold interfaces, create rich graphic art & digital assets,
+              and build functional web systems with clean PHP &amp; JS. Based in Indonesia. Powered by coffee &amp; a Huion tablet.
+            </p>
+          </div>
+        </div>
+
+        <!-- Window 2: Skills -->
+        <div class="os-window win-skills" id="win-skills" role="region" aria-label="Skills window">
+          <div class="os-titlebar" id="titlebar-skills" aria-label="Drag to move">
+            <span class="os-btn close" title="Close"></span>
+            <span class="os-btn min"   title="Minimize"></span>
+            <span class="os-btn max"   title="Maximize"></span>
+            <span class="os-title">skills.exe</span>
+          </div>
+          <div class="os-window-body" id="skills-container">
+            <!-- Loaded from data.json -->
+          </div>
+        </div>
+
+        <!-- Window 3: Tech Stack -->
+        <div class="os-window win-stack" id="win-stack" role="region" aria-label="Tech stack window">
+          <div class="os-titlebar" id="titlebar-stack" aria-label="Drag to move">
+            <span class="os-btn close" title="Close"></span>
+            <span class="os-btn min"   title="Minimize"></span>
+            <span class="os-btn max"   title="Maximize"></span>
+            <span class="os-title">stack.exe</span>
+          </div>
+          <div class="os-window-body">
+            <div class="stack-icons">
+              <div class="stack-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+              <div class="stack-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+              <div class="stack-item"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+              <div class="stack-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+              <div class="stack-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+              <div class="stack-item"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+              <div class="stack-item"><i class="devicon-ubuntu-plain colored"></i><span>Ubuntu</span></div>
+              <div class="stack-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /os-desktop -->
+    </section>
+
+    <!-- ─── DIGITAL STORE ─── -->
+    <section id="store" class="section" aria-label="Digital Store">
+      <div class="reveal">
+        <p class="section-label">Digital Asset Store</p>
+        <h2 class="section-title">
+          GET THE <span class="accent">PACK</span>
+        </h2>
+      </div>
+
+      <div class="store-block reveal">
+        <div class="store-left">
+          <span class="store-eyebrow">// Exclusive on Itch.io</span>
+          <h3 class="store-heading">
+            Foliage &amp;<br>
+            World-Build<br>
+            Asset Packs
+          </h3>
+          <p class="store-desc">
+            Premium pixel-art assets: rich foliage, environmental props, and inanimate world-building
+            components crafted for indie games and creative projects. Fully tileable, clean palette.
+          </p>
+          <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="btn-store" id="btn-store-link">
+            BROWSE STORE ↗
+          </a>
+        </div>
+
+        <div class="store-right">
+          <div class="store-preview">
+            <img src="assets/project3.png" alt="Foliage asset pack preview">
+            <span class="store-preview-label">FOLIAGE PACK V1</span>
+          </div>
+          <div class="store-preview">
+            <img src="assets/background.png" alt="Background environment preview">
+            <span class="store-preview-label">ENV PROPS PACK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" class="section" aria-label="Contact">
+      <div class="reveal">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">
+          LET'S <span class="accent">TALK</span>
+        </h2>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-left">
+          <h3 class="contact-tagline">
+            Got a project?<br>
+            <span>Let's build</span><br>
+            something bold.
+          </h3>
+
+          <div class="social-handles">
+            <a href="mailto:salman@ceryostrich.my.id" class="social-handle" id="link-email">
+              <i class="devicon-google-plain"></i>
+              <span class="handle-label">Email</span>
+              <span class="handle-value">salman@ceryostrich.my.id</span>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="social-handle" id="link-github">
+              <i class="devicon-github-original"></i>
+              <span class="handle-label">GitHub</span>
+              <span class="handle-value">@ceryostrich</span>
+            </a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-handle" id="link-linkedin">
+              <i class="devicon-linkedin-plain colored"></i>
+              <span class="handle-label">LinkedIn</span>
+              <span class="handle-value">Salman / Ceryostrich</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/placeholder" method="POST">
+            <div>
+              <label for="contact-name">// Your Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="e.g. John Doe" required>
+            </div>
+            <div>
+              <label for="contact-email">// Your Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="you@domain.com" required>
+            </div>
+            <div>
+              <label for="contact-message">// Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-brut primary" id="btn-send-msg">SEND_MESSAGE ▶</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ─── PROJECT MODAL ─── -->
+  <div id="project-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal-content">
+      <div class="modal-topbar">
+        <span class="os-btn close"></span>
+        <span class="os-btn min"></span>
+        <span class="os-btn max"></span>
+        <span class="os-title" id="modal-title">Project</span>
+        <button class="close-modal" id="close-modal-btn" aria-label="Close modal">[X]</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-img" src="" alt="Project preview">
+        <div class="modal-info">
+          <h3 id="modal-title-body">Title</h3>
+          <p  id="modal-desc">Description</p>
+          <a  id="modal-link" href="#" target="_blank" rel="noopener" class="btn-brut primary">VIEW PROJECT ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <span class="footer-logo">CERY<span style="color:var(--accent-pink)">_</span>OSTRICH</span>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Work</a>
+      <a href="#store">Store</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="mono-font">© 2025 Salman. All rights reserved.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+</html>

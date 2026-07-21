@@ -1,0 +1,66 @@
+{
+  "services": [
+    {
+      "icon": "✦",
+      "title": "UI/UX Design",
+      "description": "Crafting bold, high-impact interfaces that break convention. From wireframes to pixel-perfect screens using Figma & Affinity V3.",
+      "tags": ["Figma", "Affinity", "Prototyping"]
+    },
+    {
+      "icon": "◈",
+      "title": "Graphic & Digital Art",
+      "description": "Illustration, brand identity, pixel art, and game-ready environmental assets with rich detail and personality.",
+      "tags": ["Clip Studio", "Pixel Art", "Illustration"]
+    },
+    {
+      "icon": "⟁",
+      "title": "Web Development",
+      "description": "Full-stack web apps engineered with clean PHP native and JavaScript. Fast, modular, and built to last.",
+      "tags": ["PHP", "JS", "MySQL"]
+    }
+  ],
+  "projects_uiux": [
+    {
+      "title": "School Ops Dashboard",
+      "short_description": "Data-heavy management system UI.",
+      "description": "A data-heavy dashboard interface built for managing school operations, handling student records, and tracking attendance. Designed with accessibility and high information density in mind.",
+      "image": "assets/project1.png",
+      "link": "#",
+      "tags": ["PHP", "JS", "UI Design"]
+    },
+    {
+      "title": "Village Admin Portal",
+      "short_description": "Public-service interface for local gov.",
+      "description": "A clean, accessible public-service UI designed to help villagers access administrative services online. Focused on clarity and ease-of-use for non-tech-savvy users.",
+      "image": "assets/project2.png",
+      "link": "#",
+      "tags": ["PHP", "MySQL", "UI/UX"]
+    }
+  ],
+  "projects_graphic": [
+    {
+      "title": "Foliage Asset Pack Vol.1",
+      "short_description": "Rich pixel-art foliage & env props.",
+      "description": "A premium collection of hand-crafted pixel-art foliage, environmental props, and world-building components for indie game developers. Available on Itch.io.",
+      "image": "assets/project3.png",
+      "link": "https://itch.io",
+      "tags": ["Pixel Art", "Game Assets", "Clip Studio"]
+    },
+    {
+      "title": "Character Sticker Pack",
+      "short_description": "Expressive character illustrations.",
+      "description": "A set of expressive character stickers and sprites designed for Discord, Twitch overlays, and indie game use. Bold outlines with saturated color palettes.",
+      "image": "assets/avatar2.png",
+      "link": "https://itch.io",
+      "tags": ["Illustration", "Affinity", "Stickers"]
+    }
+  ],
+  "skills": [
+    { "name": "UI/UX Layout", "level": 90 },
+    { "name": "JavaScript", "level": 80 },
+    { "name": "PHP Native", "level": 85 },
+    { "name": "Graphic Design", "level": 92 },
+    { "name": "Pixel Art", "level": 88 },
+    { "name": "Clip Studio Paint", "level": 85 }
+  ]
+}
