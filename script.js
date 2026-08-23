@@ -1,6 +1,6 @@
 /* =====================================================
-   CERYOSTRICH PORTFOLIO — script.js
-   Neo-Brutalist Edition
+   CERYOSTRICH — script.js
+   Independent Digital Creator
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -163,14 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle  = document.getElementById('modal-title');
   const modalTitleB = document.getElementById('modal-title-body');
   const modalDesc   = document.getElementById('modal-desc');
+  const modalStatus = document.getElementById('modal-status');
   const modalLink   = document.getElementById('modal-link');
   const closeBtn    = document.getElementById('close-modal-btn');
 
   function openModal(card) {
-    const title = card.dataset.title;
-    const desc  = card.dataset.desc;
-    const img   = card.dataset.img;
-    const link  = card.dataset.link;
+    const title  = card.dataset.title;
+    const desc   = card.dataset.desc;
+    const img    = card.dataset.img;
+    const link   = card.dataset.link;
+    const status = card.dataset.status;
 
     if (title) {
       modalTitle.textContent  = title;
@@ -179,6 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
       modalImg.src            = img;
       modalImg.alt            = title;
       modalLink.href          = link;
+
+      if (modalStatus && status) {
+        modalStatus.textContent = status;
+        modalStatus.setAttribute('data-status', status);
+      }
+
       modal.classList.remove('hidden');
       document.body.style.overflow = 'hidden';
     }
@@ -211,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
 
-      /* — Services — */
+      /* — Services / What I Build — */
       const servicesContainer = document.getElementById('services-container');
       if (servicesContainer && data.services) {
         servicesContainer.innerHTML = data.services.map(s => `
@@ -226,47 +234,49 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
       }
 
-      /* — UI/UX Projects — */
-      const uiuxContainer = document.getElementById('uiux-container');
-      if (uiuxContainer && data.projects_uiux) {
-        uiuxContainer.innerHTML = data.projects_uiux.map(p => buildProjectCard(p)).join('');
+      /* — Design Projects — */
+      const designContainer = document.getElementById('design-container');
+      if (designContainer && data.projects_design) {
+        designContainer.innerHTML = data.projects_design.map(p => buildProjectCard(p)).join('');
       }
 
-      /* — Graphic / Assets Projects — */
-      const graphicContainer = document.getElementById('graphic-container');
-      if (graphicContainer && data.projects_graphic) {
-        graphicContainer.innerHTML = data.projects_graphic.map(p => buildProjectCard(p)).join('');
+      /* — Code Projects — */
+      const codeContainer = document.getElementById('code-container');
+      if (codeContainer && data.projects_code) {
+        codeContainer.innerHTML = data.projects_code.map(p => buildProjectCard(p)).join('');
       }
 
-      /* — Skills bars — */
+      /* — Game / Asset Projects — */
+      const gameContainer = document.getElementById('game-container');
+      if (gameContainer && data.projects_game) {
+        gameContainer.innerHTML = data.projects_game.map(p => buildProjectCard(p)).join('');
+      }
+
+      /* — Experiments — */
+      const experimentsContainer = document.getElementById('experiments-container');
+      if (experimentsContainer && data.experiments) {
+        experimentsContainer.innerHTML = data.experiments.map((exp, i) => `
+          <div class="experiment-card" role="listitem">
+            <div class="experiment-num">${String(i + 1).padStart(2, '0')}</div>
+            <h4 class="experiment-title">${escHtml(exp.title)}</h4>
+            <p class="experiment-desc">${escHtml(exp.description)}</p>
+            <span class="experiment-status" data-status="${escHtml(exp.status)}">${escHtml(exp.status)}</span>
+          </div>
+        `).join('');
+      }
+
+      /* — Skills (grouped capabilities) — */
       const skillsContainer = document.getElementById('skills-container');
       if (skillsContainer && data.skills) {
-        skillsContainer.innerHTML = data.skills.map(sk => `
-          <div class="skill-row">
-            <div class="skill-label">
-              <span>${sk.name}</span>
-              <span class="skill-pct">${sk.level}%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" style="width: 0%" data-width="${sk.level}%"></div>
+        const groups = Object.entries(data.skills);
+        skillsContainer.innerHTML = groups.map(([groupName, items]) => `
+          <div class="skill-group">
+            <div class="skill-group-title">// ${escHtml(groupName)}</div>
+            <div class="skill-items">
+              ${items.map(item => `<span class="skill-item">${escHtml(item)}</span>`).join('')}
             </div>
           </div>
         `).join('');
-
-        // Animate skill bars when window enters viewport
-        const skillObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-                setTimeout(() => { bar.style.width = bar.dataset.width; }, 200);
-              });
-              skillObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.3 });
-
-        const osDes = document.getElementById('os-desktop');
-        if (osDes) skillObserver.observe(osDes);
       }
 
       attachCardListeners();
@@ -276,6 +286,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* — Project card HTML builder — */
   function buildProjectCard(p) {
     const tags = p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('');
+    const statusHtml = p.status
+      ? `<span class="project-status" data-status="${escHtml(p.status)}">${escHtml(p.status)}</span>`
+      : '';
     return `
       <article
         class="project-card"
@@ -284,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data-desc="${escHtml(p.description)}"
         data-img="${escHtml(p.image)}"
         data-link="${escHtml(p.link)}"
+        data-status="${escHtml(p.status || '')}"
         aria-label="${escHtml(p.title)}"
       >
         <div class="project-thumb">
@@ -293,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h4>${escHtml(p.title)}</h4>
           <p>${escHtml(p.short_description)}</p>
           <div class="proj-tags">${tags}</div>
+          ${statusHtml}
         </div>
       </article>
     `;

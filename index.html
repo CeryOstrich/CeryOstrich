@@ -4,9 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ceryostrich — UI Designer & Graphic Artist & Coder</title>
+  <title>CeryOstrich — Independent Digital Creator</title>
   <meta name="description"
-    content="Salman (Ceryostrich) — UI/UX Designer, Graphic Artist & Software Engineer. Bold, expressive portfolio showcasing hybrid creative & technical skills.">
+    content="CeryOstrich is an independent digital creator exploring design, code, game development, and digital experiments.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CeryOstrich — Independent Digital Creator">
+  <meta property="og:description"
+    content="CeryOstrich is an independent digital creator exploring design, code, game development, and digital experiments.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon / Tab Icon -->
+  <link rel="icon" type="image/png" href="assets/ceryostrrich.png">
+  <link rel="apple-touch-icon" href="assets/ceryostrrich.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,40 +41,47 @@
 
   <!-- ─── NAVIGATION ─── -->
   <nav id="main-nav">
-    <a href="#home" class="nav-logo">CERY<span style="color:var(--accent-pink);">_</span>OSTRICH</a>
+    <a href="#home" class="nav-logo">
+      <img src="assets/ceryostrrich.png" alt="Ceryostrich Logo" class="nav-logo-img">
+      <span>CERY<span style="color:var(--accent-pink);">_</span>OSTRICH</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#home" id="nav-home" class="active">Home</a></li>
-      <li><a href="#services" id="nav-services">Services</a></li>
-      <li><a href="#projects" id="nav-projects">Projects</a></li>
+      <li><a href="#works" id="nav-works">Works</a></li>
+      <li><a href="#experiments" id="nav-experiments">Experiments</a></li>
       <li><a href="#about" id="nav-about">About</a></li>
       <li><a href="#store" id="nav-store">Store</a></li>
       <li><a href="#contact" id="nav-contact">Contact</a></li>
     </ul>
-    <span class="nav-status mono-font">[ SYS_READY // v2.0 ]</span>
+    <span class="nav-status mono-font">[ SYS_READY // BUILDING ]</span>
   </nav>
 
   <!-- ─── MARQUEE ─── -->
   <div class="marquee-wrapper" aria-hidden="true">
     <div class="marquee-track" id="marquee-track">
-      <span>SALMAN</span>
+      <span>CERYOSTRICH</span>
       <span class="sep">✦</span>
-      <span>UI DESIGNER</span>
+      <span>DESIGN</span>
       <span class="sep">✦</span>
-      <span>GRAPHIC ARTIST</span>
+      <span>CODE</span>
       <span class="sep">✦</span>
-      <span>CODER</span>
+      <span>GAME DEV</span>
+      <span class="sep">✦</span>
+      <span>DIGITAL ASSETS</span>
+      <span class="sep">✦</span>
+      <span>EXPERIMENTS</span>
       <span class="sep">✦</span>
       <span>CERYOSTRICH</span>
       <span class="sep">✦</span>
-      <span>SALMAN</span>
+      <span>DESIGN</span>
       <span class="sep">✦</span>
-      <span>UI DESIGNER</span>
+      <span>CODE</span>
       <span class="sep">✦</span>
-      <span>GRAPHIC ARTIST</span>
+      <span>GAME DEV</span>
       <span class="sep">✦</span>
-      <span>CODER</span>
+      <span>DIGITAL ASSETS</span>
       <span class="sep">✦</span>
-      <span>CERYOSTRICH</span>
+      <span>EXPERIMENTS</span>
       <span class="sep">✦</span>
     </div>
   </div>
@@ -75,50 +92,60 @@
     <!-- ─── HERO ─── -->
     <section id="home" class="section" aria-label="Hero">
       <div class="hero-left">
-        <div class="hero-tag">Available for Projects ● 2026</div>
+        <div class="hero-tag">STATUS: BUILDING ● 2026</div>
 
         <h1 class="hero-name">
           <span class="line-2">CERYOSTRICH</span>
         </h1>
 
         <p class="hero-subtitle">
-          Informatics student by day.<br>
-          UI designer, graphic artist &amp; coder by compulsion.<br>
-          <span style="color:var(--accent);">// Ceryostrich</span>
+          Independent Digital Creator<br>
+          Design, code, and game development — built through<br>
+          curiosity, experimentation, and actually making things.<br>
+          <span style="color:var(--accent);">// CeryOstrich</span>
         </p>
 
-        <!-- Sticker Badges -->
-        <div class="sticker-badges" role="list" aria-label="Skill categories">
-          <span class="badge lime" role="listitem">🎨 UI Design</span>
-          <span class="badge pink" role="listitem">🖌️ Graphic Design</span>
-          <span class="badge cyan" role="listitem">⌨️ Web Development</span>
-          <span class="badge dark" role="listitem">🎮 Game Assets</span>
-          <span class="badge lime" role="listitem">📐 Affinity</span>
-          <span class="badge pink" role="listitem">🔲 Illustration</span>
+        <!-- Capability Badges -->
+        <div class="sticker-badges" role="list" aria-label="Core capabilities">
+          <span class="badge lime" role="listitem">🎨 Design</span>
+          <span class="badge pink" role="listitem">⌨️ Code</span>
+          <span class="badge cyan" role="listitem">🎮 Game Dev</span>
+          <span class="badge dark" role="listitem">📦 Digital Assets</span>
         </div>
 
         <div class="hero-cta">
-          <a href="#projects" class="btn-brut primary" id="cta-explore">EXPLORE WORK_</a>
-          <a href="#contact" class="btn-brut secondary" id="cta-contact">CONTACT ME</a>
+          <a href="#works" class="btn-brut primary" id="cta-explore">VIEW WORKS_</a>
+          <a href="#about" class="btn-brut secondary" id="cta-about">ABOUT ME</a>
         </div>
       </div>
 
       <div class="hero-right">
         <div class="avatar-frame floating">
-          <img src="assets/ceryostrrich.png" alt="Ceryostrich Logo" id="hero-avatar">
+          <img src="assets/avatar.png" alt="CeryOstrich Avatar" id="hero-avatar">
         </div>
         <div class="deco-block deco-1">SINCE 2022_</div>
-        <div class="deco-block deco-2">INFORMATICS 📚</div>
+        <div class="deco-block deco-2">STATUS: LEARNING 🔧</div>
         <div class="deco-block deco-3">OPEN_TO_WORK ●</div>
       </div>
     </section>
 
-    <!-- ─── SERVICES ─── -->
-    <section id="services" class="section" aria-label="Services">
+    <!-- ─── BRAND STATEMENT ─── -->
+    <section class="section brand-section" aria-label="Brand statement">
       <div class="reveal">
-        <p class="section-label">What I Do</p>
+        <p class="brand-statement">
+          I explore the intersection of design and technology — creating interfaces, digital tools,
+          visual assets, and games. I learn by making things, breaking things, and rebuilding them.
+        </p>
+        <span class="brand-aside mono-font">// WHY DOES THIS WORK? DON'T TOUCH IT.</span>
+      </div>
+    </section>
+
+    <!-- ─── WHAT I BUILD ─── -->
+    <section id="services" class="section" aria-label="What I Build">
+      <div class="reveal">
+        <p class="section-label">What I Build</p>
         <h2 class="section-title">
-          MY <span class="outline">CRAFT</span>
+          WHAT I <span class="accent">BUILD</span>
         </h2>
       </div>
 
@@ -127,8 +154,8 @@
       </div>
     </section>
 
-    <!-- ─── PROJECT SHOWCASE ─── -->
-    <section id="projects" class="section" aria-label="Projects">
+    <!-- ─── THE VAULT — PROJECT SHOWCASE ─── -->
+    <section id="works" class="section" aria-label="Projects">
       <div class="reveal">
         <p class="section-label">Selected Work</p>
         <h2 class="section-title">
@@ -136,23 +163,50 @@
         </h2>
       </div>
 
-      <!-- UI/UX Module -->
+      <!-- DESIGN Module -->
       <div class="reveal">
-        <div class="vault-label uiux">// UI/UX Case Studies</div>
+        <div class="vault-label design">// Design — UI/UX &amp; Visual Systems</div>
         <h3 class="vault-title">Design <span style="color:var(--accent-cyan)">Systems</span></h3>
       </div>
-      <div class="projects-grid" id="uiux-container" role="list">
+      <div class="projects-grid" id="design-container" role="list">
         <!-- Loaded from data.json -->
       </div>
 
-      <!-- Graphic / Assets Module -->
+      <!-- CODE Module -->
       <div class="reveal">
-        <div class="vault-label graphic">// Graphic & Digital Assets</div>
-        <h3 class="vault-title">Visual <span style="color:var(--accent-pink)">Works</span></h3>
+        <div class="vault-label code">// Code — Web Systems &amp; Tools</div>
+        <h3 class="vault-title">Code <span style="color:var(--accent)">Works</span></h3>
       </div>
-      <div class="projects-grid" id="graphic-container" role="list">
+      <div class="projects-grid" id="code-container" role="list">
         <!-- Loaded from data.json -->
       </div>
+
+      <!-- GAME Module -->
+      <div class="reveal">
+        <div class="vault-label game">// Game — Assets &amp; Experiments</div>
+        <h3 class="vault-title">Game <span style="color:var(--accent-pink)">Assets</span></h3>
+      </div>
+      <div class="projects-grid" id="game-container" role="list">
+        <!-- Loaded from data.json -->
+      </div>
+    </section>
+
+    <!-- ─── EXPERIMENTS.EXE ─── -->
+    <section id="experiments" class="section" aria-label="Experiments">
+      <div class="reveal">
+        <p class="section-label">Currently Exploring</p>
+        <h2 class="section-title">
+          EXPERIMENTS<span class="accent">.EXE</span>
+        </h2>
+      </div>
+
+      <div class="experiments-grid reveal" id="experiments-container" role="list">
+        <!-- Loaded from data.json -->
+      </div>
+
+      <p class="experiments-footer mono-font reveal">
+        // BUILDING... probably.
+      </p>
     </section>
 
     <!-- ─── ABOUT / OS DASHBOARD ─── -->
@@ -186,12 +240,12 @@
           <div class="os-window-body">
             <img src="assets/avatar2.png" alt="Salman profile" class="about-photo">
             <div class="about-name">Salman</div>
-            <div class="about-role mono-font">// UI Designer · Graphic Artist · Coder</div>
+            <div class="about-role mono-font">// Independent Digital Creator</div>
             <p class="about-bio">
-              Informatics student with a hybrid skill set — I design bold interfaces, create rich graphic art & digital
-              assets,
-              and build functional web systems with clean PHP &amp; JS. Based in Indonesia. Powered by coffee &amp; a
-              Huion tablet.
+              I'm an independent digital creator exploring the intersection of design, code, and game development.
+              I build websites, digital tools, visual assets, and game experiments — mostly because I'm curious
+              about how things work and what I can build with them.
+              My approach is simple: learn by making. Based in Indonesia. Powered by coffee &amp; a Huion tablet.
             </p>
           </div>
         </div>
@@ -225,8 +279,10 @@
               <div class="stack-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
               <div class="stack-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
               <div class="stack-item"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
-              <div class="stack-item"><i class="devicon-ubuntu-plain colored"></i><span>Ubuntu</span></div>
+              <div class="stack-item"><i class="devicon-godot-plain colored"></i><span>Godot</span></div>
               <div class="stack-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+              <div class="stack-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
+              <div class="stack-item"><i class="devicon-ubuntu-plain colored"></i><span>Ubuntu</span></div>
             </div>
           </div>
         </div>
@@ -245,7 +301,7 @@
 
       <div class="store-block reveal">
         <div class="store-left">
-          <span class="store-eyebrow">// Exclusive on Itch.io</span>
+          <span class="store-eyebrow">// Digital assets made by CeryOstrich</span>
           <h3 class="store-heading">
             Foliage &amp;<br>
             World-Build<br>
@@ -285,9 +341,9 @@
       <div class="contact-grid reveal">
         <div class="contact-left">
           <h3 class="contact-tagline">
-            Got a project?<br>
+            Have an idea?<br>
             <span>Let's build</span><br>
-            something bold.
+            something.
           </h3>
 
           <div class="social-handles">
@@ -321,7 +377,7 @@
             </div>
             <div>
               <label for="contact-message">// Message</label>
-              <textarea id="contact-message" name="message" placeholder="Tell me about your project..."
+              <textarea id="contact-message" name="message" placeholder="Tell me about your idea..."
                 required></textarea>
             </div>
             <button type="submit" class="btn-brut primary" id="btn-send-msg">SEND_MESSAGE ▶</button>
@@ -347,6 +403,7 @@
         <div class="modal-info">
           <h3 id="modal-title-body">Title</h3>
           <p id="modal-desc">Description</p>
+          <span id="modal-status" class="project-status">STATUS</span>
           <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn-brut primary">VIEW PROJECT ↗</a>
         </div>
       </div>
@@ -355,14 +412,18 @@
 
   <!-- ─── FOOTER ─── -->
   <footer>
-    <span class="footer-logo">CERY<span style="color:var(--accent-pink)">_</span>OSTRICH</span>
+    <span class="footer-logo">
+      <img src="assets/ceryostrrich.png" alt="Ceryostrich Logo" class="footer-logo-img">
+      <span>CERY<span style="color:var(--accent-pink)">_</span>OSTRICH</span>
+    </span>
     <div class="footer-links">
       <a href="#home">Home</a>
-      <a href="#projects">Work</a>
+      <a href="#works">Works</a>
+      <a href="#experiments">Experiments</a>
       <a href="#store">Store</a>
       <a href="#contact">Contact</a>
     </div>
-    <span class="mono-font">© 2025 Salman. All rights reserved.</span>
+    <span class="mono-font">© 2026 CeryOstrich. All rights reserved.</span>
   </footer>
 
   <!-- Scripts -->

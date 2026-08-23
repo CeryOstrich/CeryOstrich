@@ -1,48 +1,51 @@
 {
   "services": [
     {
-      "icon": "✦",
-      "title": "GAME UI & ASSETS",
-      "description": "Crafting immersive game user interfaces, HUDs, pixel art, and production-ready 2D environmental assets tailored for games.",
-      "tags": [
-        "Game Ui",
-        "Game Assets",
-        "Environment"
-      ]
-    },
-    {
       "icon": "◈",
-      "title": "GRAPHIC & ILLUSTRATION",
-      "description": "High-impact visual identities, custom digital illustrations, and standalone graphics built with precision and personality.",
+      "title": "01 — DESIGN",
+      "description": "UI/UX interfaces, graphic identities, visual systems, and production-ready digital assets — crafted with precision and personality.",
       "tags": [
-        "ILLUSTRATION",
-        "BRAND IDENTITY",
-        "AFFINITY",
-        "CLIP STUDIO"
+        "UI/UX",
+        "Graphic Design",
+        "Visual Systems",
+        "Digital Assets"
       ]
     },
     {
       "icon": "⟁",
-      "title": "WEB DEVELOPMENT",
-      "description": "Full-stack web applications engineered with clean PHP native and JavaScript. Fast, modular, and built for performance.",
+      "title": "02 — CODE",
+      "description": "Full-stack web applications, automation scripts, and digital tools — engineered with clean PHP, JavaScript, and a focus on solving real problems.",
       "tags": [
-        "PHP",
-        "JAVASCRIPT",
-        "MySQL"
+        "Web Development",
+        "Automation",
+        "Digital Tools",
+        "Web Systems"
+      ]
+    },
+    {
+      "icon": "✦",
+      "title": "03 — GAME",
+      "description": "Game prototypes, pixel-art assets, and gameplay experiments built in Godot — exploring interactive worlds one sprite at a time.",
+      "tags": [
+        "Godot",
+        "Game Prototypes",
+        "Game Assets",
+        "Experiments"
       ]
     }
   ],
-  "projects_uiux": [
+  "projects_design": [
     {
       "title": "School Ops Dashboard",
       "short_description": "Data-heavy management system UI.",
       "description": "A data-heavy dashboard interface built for managing school operations, handling student records, and tracking attendance. Designed with accessibility and high information density in mind.",
       "image": "assets/project1.png",
       "link": "#",
+      "status": "COMPLETED",
       "tags": [
-        "PHP",
-        "JS",
-        "UI Design"
+        "UI Design",
+        "Dashboard",
+        "Web System"
       ]
     },
     {
@@ -51,24 +54,54 @@
       "description": "A clean, accessible public-service UI designed to help villagers access administrative services online. Focused on clarity and ease-of-use for non-tech-savvy users.",
       "image": "assets/project2.png",
       "link": "#",
+      "status": "COMPLETED",
       "tags": [
-        "PHP",
-        "MySQL",
-        "UI/UX"
+        "UI/UX",
+        "Public Service",
+        "Accessibility"
       ]
     }
   ],
-  "projects_graphic": [
+  "projects_code": [
+    {
+      "title": "School Ops Backend",
+      "short_description": "PHP/MySQL backend for school management.",
+      "description": "The server-side engine powering the School Ops Dashboard — handling authentication, student records CRUD, attendance tracking, and report generation with native PHP and MySQL.",
+      "image": "assets/project1.png",
+      "link": "#",
+      "status": "COMPLETED",
+      "tags": [
+        "PHP",
+        "MySQL",
+        "Backend"
+      ]
+    },
+    {
+      "title": "Village Admin System",
+      "short_description": "Full-stack local gov web system.",
+      "description": "Complete web system for village administration — built with PHP and JavaScript, handling document requests, citizen data management, and administrative workflows.",
+      "image": "assets/project2.png",
+      "link": "#",
+      "status": "COMPLETED",
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "Full-Stack"
+      ]
+    }
+  ],
+  "projects_game": [
     {
       "title": "Foliage Asset Pack Vol.1",
       "short_description": "Rich pixel-art foliage & env props.",
       "description": "A premium collection of hand-crafted pixel-art foliage, environmental props, and world-building components for indie game developers. Available on Itch.io.",
       "image": "assets/project3.png",
       "link": "https://itch.io",
+      "status": "LIVE",
       "tags": [
         "Pixel Art",
         "Game Assets",
-        "Clip Studio"
+        "Itch.io"
       ]
     },
     {
@@ -77,37 +110,55 @@
       "description": "A set of expressive character stickers and sprites designed for Discord, Twitch overlays, and indie game use. Bold outlines with saturated color palettes.",
       "image": "assets/avatar2.png",
       "link": "https://itch.io",
+      "status": "LIVE",
       "tags": [
         "Illustration",
-        "Affinity",
-        "Stickers"
+        "Sprites",
+        "Game Assets"
       ]
     }
   ],
-  "skills": [
+  "experiments": [
     {
-      "name": "UI/UX Layout",
-      "level": 90
+      "title": "Godot Platformer",
+      "status": "PROTOTYPE",
+      "description": "2D platformer prototype exploring movement mechanics and tilemap systems in Godot."
     },
     {
-      "name": "JavaScript",
-      "level": 80
+      "title": "Portfolio Website",
+      "status": "LIVE",
+      "description": "This website — a neo-brutalist experiment in personal branding and web design."
     },
     {
-      "name": "PHP Native",
-      "level": 85
+      "title": "Pixel Art Studies",
+      "status": "ONGOING",
+      "description": "Continuous exploration of pixel art techniques, palettes, and environmental storytelling."
     },
     {
-      "name": "Graphic Design",
-      "level": 92
-    },
-    {
-      "name": "Pixel Art",
-      "level": 88
-    },
-    {
-      "name": "Clip Studio Paint",
-      "level": 85
+      "title": "Automation Scripts",
+      "status": "EXPERIMENT",
+      "description": "Collection of small scripts and tools for automating repetitive tasks."
     }
-  ]
+  ],
+  "skills": {
+    "design": [
+      "UI/UX Design",
+      "Graphic Design",
+      "Visual Systems",
+      "Digital Assets",
+      "Pixel Art"
+    ],
+    "development": [
+      "Web Development",
+      "Backend Systems",
+      "Automation",
+      "Game Development"
+    ],
+    "creative": [
+      "Illustration",
+      "Visual Exploration",
+      "Prototyping",
+      "Asset Creation"
+    ]
+  }
 }
