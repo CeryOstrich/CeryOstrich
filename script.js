@@ -321,14 +321,30 @@ document.addEventListener('DOMContentLoaded', () => {
       .replace(/"/g, '&quot;');
   }
 
-  /* ─── NAV BACKGROUND ON SCROLL ─── */
+  /* ─── NAV BACKGROUND & VISIBILITY ON SCROLL ─── */
   const nav = document.getElementById('main-nav');
+  let lastScrollY = window.scrollY;
+
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
+    const currentScrollY = window.scrollY;
+    
+    // Background border color logic
+    if (currentScrollY > 20) {
       nav.style.borderBottomColor = 'var(--accent)';
     } else {
       nav.style.borderBottomColor = '#000';
     }
+
+    // Hide/Show on scroll logic
+    if (currentScrollY > lastScrollY && currentScrollY > 56) {
+      // Scrolling down and past the nav height
+      nav.classList.add('nav-hidden');
+    } else {
+      // Scrolling up or at the top
+      nav.classList.remove('nav-hidden');
+    }
+
+    lastScrollY = currentScrollY;
   }, { passive: true });
 
 });

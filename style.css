@@ -2,7 +2,7 @@
    CERYOSTRICH PORTFOLIO — NEO-BRUTALIST DESIGN SYSTEM
    ==================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@400;600;700;800;900&display=swap');
 
 /* ─── TOKENS ─── */
 :root {
@@ -19,7 +19,7 @@
   --shadow-accent: 4px 4px 0px var(--accent);
   --shadow-pink:   4px 4px 0px var(--accent-pink);
 
-  --font-display: 'Bebas Neue', sans-serif;
+  --font-display: 'Unbounded', sans-serif;
   --font-body:    'Space Grotesk', sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
 
@@ -116,6 +116,11 @@ nav {
   justify-content: space-between;
   padding: 0 2rem;
   height: 56px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .nav-logo {
@@ -123,9 +128,10 @@ nav {
   align-items: center;
   gap: 0.75rem;
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--accent);
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   transition: opacity 0.15s ease;
 }
@@ -205,16 +211,17 @@ nav {
 
 .marquee-track span {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.05rem;
+  font-weight: 800;
   color: #000;
   padding: 0 2rem;
   white-space: nowrap;
-  letter-spacing: 3px;
+  letter-spacing: 1.5px;
 }
 
 .marquee-track span.sep {
   color: var(--accent-pink);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0;
 }
 
@@ -256,11 +263,12 @@ main {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 0.95;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
   color: var(--text);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: -0.5px;
 }
 
 .section-title .outline {
@@ -314,10 +322,11 @@ main {
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(4.5rem, 10vw, 9rem);
-  line-height: 0.9;
+  font-size: clamp(2.6rem, 6.2vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.98;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: -1px;
   margin-bottom: 1rem;
 }
 
@@ -508,11 +517,12 @@ main {
 
 .service-title {
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--text);
   margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   transition: color 0.15s;
 }
 
@@ -563,9 +573,10 @@ main {
 
 .vault-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 2.5rem;
   border-bottom: var(--border-thick);
   padding-bottom: 1rem;
@@ -640,9 +651,10 @@ main {
 .project-info h3,
 .project-info h4 {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.35rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
   color: var(--text);
   transition: color 0.1s;
@@ -784,7 +796,8 @@ main {
 
 .about-name {
   font-family: var(--font-display);
-  font-size: 1.8rem;
+  font-size: 1.45rem;
+  font-weight: 800;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.3rem;
@@ -902,12 +915,12 @@ main {
 }
 
 .store-left::after {
-  content: '🌿';
+  content: '✦';
   position: absolute;
   right: -1rem;
-  bottom: -1rem;
-  font-size: 8rem;
-  opacity: 0.15;
+  bottom: -1.5rem;
+  font-size: 9rem;
+  opacity: 0.1;
   pointer-events: none;
   line-height: 1;
 }
@@ -926,11 +939,12 @@ main {
 
 .store-heading {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
   text-transform: uppercase;
-  line-height: 0.95;
+  line-height: 1.05;
   margin-bottom: 1.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .store-desc {
@@ -1027,11 +1041,12 @@ main {
 
 .contact-tagline {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 800;
   text-transform: uppercase;
-  line-height: 0.95;
+  line-height: 1.05;
   margin-bottom: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .contact-tagline span { color: var(--accent); }
@@ -1129,9 +1144,10 @@ footer .footer-logo {
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: var(--accent);
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 footer .footer-logo-img {
@@ -1236,10 +1252,11 @@ footer .footer-links a:hover { color: var(--accent); }
 
 .modal-info h3 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
   text-transform: uppercase;
   color: var(--text);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .modal-info p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
@@ -1295,7 +1312,8 @@ footer .footer-links a:hover { color: var(--accent); }
 
 .experiment-num {
   font-family: var(--font-display);
-  font-size: 2.5rem;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--accent);
   opacity: 0.3;
   line-height: 1;
@@ -1304,9 +1322,10 @@ footer .footer-links a:hover { color: var(--accent); }
 
 .experiment-title {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.25rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--text);
   margin-bottom: 0.5rem;
 }
@@ -1432,9 +1451,9 @@ footer .footer-links a:hover { color: var(--accent); }
 
   main { padding: 0 1rem 4rem; }
 
-  .section-title { font-size: 3rem; }
+  .section-title { font-size: 2.2rem; }
 
-  .hero-name { font-size: 4rem; }
+  .hero-name { font-size: 2.6rem; }
 
   .projects-grid { grid-template-columns: 1fr; }
   .project-card { border-right: none; border-bottom: var(--border-thick); }
